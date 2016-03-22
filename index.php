@@ -169,7 +169,7 @@ include 'php/navbar.php';
             </div>
         </div>
     </div>
-    <div class="row screen offres">
+    <!--<div class="row screen offres">
         <div class="container">
             <div class="row">
                 <h1>Les types d'offres</h1>
@@ -223,63 +223,56 @@ include 'php/navbar.php';
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 	
 	<!-- Team Section -->
-	<div class="row screen offres">
+	<section class="row screen offres">
         <div class="container">
-            <div class="row">
+			<div class="row">
                 <h1>L'équipe</h1>
-
-                <p class="text">Link.IO a été développé en 2016 par 6 étudiants dans le cadre de leur formation d'ingénieur à l'INSA Rennes</p>
-
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/bastien-baret.png" class="img-responsive img-circle" alt="">
-                            <h4>Bastien<br />BARET</h4>
-                            <p class="text-muted">Président</p>
-                        </div>
+				<p class="text">Link.IO a été développé en 2016 par 6 étudiants dans le cadre de leur formation d'ingénieur à l'INSA Rennes.</p>
+			</div>
+			
+			<div class="row">
+                <div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/bastien-baret.png" class="img-responsive img-circle" alt="">
+                        <h4>Bastien<br />BARET</h4>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/valentin-bureau.png" class="img-responsive img-circle" alt="">
-                            <h4>Valentin<br />BUREAU</h4>
-                            <p class="text-muted">Trésorier</p>
-                        </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/valentin-bureau.png" class="img-responsive img-circle" alt="">
+                        <h4>Valentin<br />BUREAU</h4>
                     </div>
-					<div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/william-dazi.png" class="img-responsive img-circle" alt="">
-                            <h4>William<br />DAZI</h4>
-                            <p class="text-muted">Président</p>
-                        </div>
+                </div>
+				<div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/william-dazi.jpg" class="img-responsive img-circle" alt="">
+                        <h4>William<br />DAZI</h4>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/francois-lardeux.png" class="img-responsive img-circle" alt="">
-                            <h4>François<br />LARDEUX</h4>
-                            <p class="text-muted">Trésorier</p>
-                        </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/francois-lardeux.png" class="img-responsive img-circle" alt="">
+                        <h4>François<br />LARDEUX</h4>
                     </div>
-					<div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/leo-lozach.png" class="img-responsive img-circle" alt="">
-                            <h4>Léo<br />LOZACH</h4>
-                            <p class="text-muted">Président</p>
-                        </div>
+                </div>
+				<div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/leo-lozach.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Léo<br />LOZACH</h4>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="img/team/florent-thomas-morel.png" class="img-responsive img-circle" alt="">
-                            <h4>Florent<br />THOMAS-MOREL</h4>
-                            <p class="text-muted">Trésorier</p>
-                        </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/florent-thomas-morel.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Florent<br />THOMAS-MOREL</h4>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 <?php
