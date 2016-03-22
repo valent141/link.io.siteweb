@@ -275,7 +275,7 @@
 }
 
 .offres p.text {
-    width: 80%;
+    width: 100%;
     font-size: 1.2em;
 }
 
@@ -359,3 +359,6 @@
     border-color: #3498db;
 }
 
+.team-member {
+	text-align:center;
+}
