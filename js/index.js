@@ -15,10 +15,10 @@ $(document).ready(function() {
     miniTranslate = 0;
 
     $(window).on('scroll', function() {
-        /*if($(window).scrollTop() > 0)
+        if($(window).scrollTop() > 0)
             nav.addClass('scrolled');
         else
-            nav.removeClass('scrolled');*/
+            nav.removeClass('scrolled');
 
         var opacity = 1 - $(window).scrollTop() / ($(window).height() * 0.8);
         if(opacity < 0)

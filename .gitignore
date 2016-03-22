@@ -46,3 +46,7 @@ fabric.properties
 
 ### Intellij Patch ###
 *.iml
+.idea/.name
+.idea/compiler.xml
+.idea/encodings.xml
+*.xml
