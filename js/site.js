@@ -19,10 +19,21 @@ $(document).ready(function() {
     window.addEventListener('resize', onResize, false);
     onResize();
 
+    initPresentation();
     initTwins();
     initDemo();
 
 });
+
+function initPresentation() {
+    var max = 0;
+    $(".presentation .card").each(function() {
+        if(max < $(this).height())
+            max = $(this).height();
+    })
+
+    $(".presentation .card").css("height", max + "px");
+}
 
 function initDemo() {
     demo = new LinkIOCanvas($(".demo canvas"), "site_demo", "#3498db", window, generateRandomKey());
