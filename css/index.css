@@ -261,6 +261,10 @@
 
 /******* DEMO ********/
 
+.demo canvas {
+    cursor: pointer;
+}
+
 .boardWrapper {
     position: relative;
 }
@@ -307,6 +311,11 @@
     top: 0;
 
     transition: top 0.2s;
+}
+
+.pencils img.active {
+    position: relative;
+    top: -15px;
 }
 
 .pencils img:hover {

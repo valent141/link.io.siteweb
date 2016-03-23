@@ -16,8 +16,34 @@ $(document).ready(function() {
             nav.removeClass('scrolled');
     });
 
+    window.addEventListener('resize', onResize, false);
+    onResize();
+
     initTwins();
+    initDemo();
+
 });
+
+function initDemo() {
+    demo = new LinkIOCanvas($(".demo canvas"), "site_demo", "#3498db", window, generateRandomKey());
+
+    $(".pencils img").not(".eraser").click(function() {
+        $(".pencils img.active").removeClass("active");
+        demo.color = $(this).attr("data-color");
+        $(this).addClass("active");
+    });
+
+    $(".pencils .eraser").click(function() {
+        demo.clear(true);
+    });
+
+    demo.start(linkIO_serverIP);
+}
+
+function onResize() {
+    $("#canvas_demo").attr("height", $(".board").height());
+    $("#canvas_demo").attr("width", $(".board").width());
+}
 
 
 function initTwins() {
@@ -29,8 +55,8 @@ function initTwins() {
     pc.start(linkIO_serverIP);
 
     $(".twins .clear").click(function() {
-        tablet.clear();
-        pc.clear();
+        tablet.clear(false);
+        pc.clear(false);
     });
 
     $(".twins .btn-show").click(function() {

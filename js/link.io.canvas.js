@@ -42,6 +42,10 @@ LinkIOCanvas.prototype.start = function(ip) {
     this.can[0].addEventListener("touchmove", function(e) {
         that.mouseMove(e);
     });
+
+    this.linkIOcnx.on("clear", function(e) {
+        that.ctx.clearRect(0, 0,  that.can.width(), that.can.height());
+    });
 }
 
 LinkIOCanvas.prototype.mouseMove = function(e) {
@@ -67,10 +71,11 @@ LinkIOCanvas.prototype.mouseMove = function(e) {
     }
 }
 
-LinkIOCanvas.prototype.clear = function() {
-    this.ctx.beginPath();
-    this.ctx.fillStyle = "white";
-    this.ctx.fillRect(0, 0, this.can.width(), this.can.height());
+LinkIOCanvas.prototype.clear = function(send) {
+    this.ctx.clearRect(0, 0,  this.can.width(), this.can.height());
+
+    if(send)
+        this.linkIOcnx.emit("clear");
 }
 
 LinkIOCanvas.prototype.drawLine = function (x1, y1, x2, y2, color) {
