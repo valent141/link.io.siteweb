@@ -65,15 +65,15 @@
     }
 }
 
-/******* WHAT ********/
-.what h1 {
+
+.screen h1 {
     font-size: 4em;
     margin-top: 10vh;
     position: relative;
     margin-bottom: 80px;
 }
 
-.what h1:after {
+.screen h1:after {
     content: '';
     display: block;
     width: 150px;
@@ -84,39 +84,71 @@
     bottom: -20px;
 }
 
-.what .card {
-    height: 500px;
-    text-align: center;
-}
 
-.what .card .top {
-    color: #cccccc;
+/******* TWINS ********/
+
+
+/******* PRINCIPES ********/
+
+.presentation h1 {
+    font-size: 4em;
+    margin-top: 10vh;
     position: relative;
-    background-color: #222222;
-    overflow: hidden;
-    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
-.what .card .top span.icon.img {
-    color: #222222;
-    background: #cccccc;
+.presentation h1:after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background-color: #3498db;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.presentation p.text {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.presentation .card {
+    color: #666666;
+    display: inline-block;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin: 50px 10px 0 10px;
+    width: calc(25% - 25px);
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 0 30px 0 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.presentation .card span.icon.img {
+    color: white;
+    background: #666666;
     border-radius: 50%;
     width: 80px;
     height: 80px;
     line-height: 80px;
     font-size: 2em;
     position: absolute;
-    top: -15px;
-    left: -15px;
+    top: -13px;
+    left: -13px;
 }
 
-.what .card .top h3 {
+.presentation .card h3 {
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 25px;
 }
 
-.what .card .top .line {
+.presentation .card .line {
     width: 50px;
     height: 3px;
     background-color: #666666;
@@ -124,49 +156,48 @@
     transition: 0.3s;
 }
 
-.what .card .top .price {
-    font-size: 2em;
-    margin-bottom: 30px;
+.presentation .card p {
+    margin-bottom: 80px;
 }
 
-.what .card .bottom {
-    margin: 0 25px 0 25px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #ebebeb;
-    color: #444444;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    padding: 15px 0 5px 0;
-}
-
-.what .card .bottom .item {
-    margin-bottom: 20px;
-    padding-left: 45px;
-}
-
-.what .card .bottom .item .icon {
-    margin-right: 15px;
-}
-
-.what .card .bottom button {
-    font-family: 'Open Sans';
-    margin-bottom: 15px;
-    background-color: #3498db;
+.presentation .card span.icon.go {
     color: white;
-    font-size: 0.9em;
+    background: #666666;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    border: 2px solid transparent;
 }
 
-.what .desc h3 {
-    position: relative;
-    font-weight: bold;
+.presentation .card:hover {
+    color: black;
 }
 
-.what .desc h3:first-child {
-    margin-top: 0;
+.presentation .card:hover .line {
+    width: 150px;
+    background-color: #666666;
 }
 
-/***** MINI SLIDER *****/
+.presentation .card:hover .line {
+    background-color: #3498db;
+}
+
+.presentation .card:hover span.icon {
+    color: #3498db;
+    background-color: #222222;
+    border-color: #3498db;
+}
+
+.team-member {
+    text-align:center;
+}
+
+/***** MINI SLIDER (useless) *****/
 .miniSlider {
     height: 270px;
     background-color: #f8f8f8;
@@ -252,113 +283,4 @@
     transform: translate(0, 0);
     transition: 0.3s;
     width: 99999px;
-}
-
-/******* OFFRES ********/
-
-.offres h1 {
-    font-size: 4em;
-    margin-top: 10vh;
-    position: relative;
-    margin-bottom: 50px;
-}
-
-.offres h1:after {
-    content: '';
-    display: block;
-    width: 150px;
-    height: 5px;
-    background-color: #3498db;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-}
-
-.offres p.text {
-    width: 100%;
-    font-size: 1.2em;
-}
-
-.offres .card {
-    color: #666666;
-    display: inline-block;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    margin: 50px 10px 0 10px;
-    width: calc(25% - 25px);
-    text-align: center;
-    background-color: #ebebeb;
-    padding: 0 30px 0 30px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.offres .card span.icon.img {
-    color: white;
-    background: #666666;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 2em;
-    position: absolute;
-    top: -13px;
-    left: -13px;
-}
-
-.offres .card h3 {
-    font-weight: bold;
-    margin-top: 100px;
-    margin-bottom: 25px;
-}
-
-.offres .card .line {
-    width: 50px;
-    height: 3px;
-    background-color: #666666;
-    margin: auto auto 25px;
-    transition: 0.3s;
-}
-
-.offres .card p {
-    margin-bottom: 80px;
-}
-
-.offres .card span.icon.go {
-    color: white;
-    background: #666666;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    font-size: 1.5em;
-    position: absolute;
-    bottom: -8px;
-    right: -8px;
-    border: 2px solid transparent;
-}
-
-.offres .card:hover {
-    color: black;
-}
-
-.offres .card:hover .line {
-    width: 150px;
-    background-color: #666666;
-}
-
-.offres .card:hover .line {
-    background-color: #3498db;
-}
-
-.offres .card:hover span.icon {
-    color: #3498db;
-    background-color: #222222;
-    border-color: #3498db;
-}
-
-.team-member {
-	text-align:center;
 }

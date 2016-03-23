@@ -30,12 +30,26 @@ nav.main .logo img {
     margin: auto;
     height: 316px;
     max-width: 100%;
+    transition: none;
+}
+
+nav.main.scrolled .logo img {
+    top: -110px;
+    max-height: 200px;
+    height:auto;
+
+    transition: top 0.3s;
+}
+
+
+nav.main.scrolled .logo img.card {
+    top: -322px;
+    max-height: 143%;
 }
 
 nav.main .logo img.card {
     top: -481px;
     transform: rotateY(0deg);
-    transition: 0.5s;
 }
 
 nav.main:hover .logo img.card {

@@ -234,6 +234,7 @@ Single slide style
   display: none;
 }
 .cd-hero-slider .cd-img-container img {
+  max-height: 50vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -278,7 +279,7 @@ Single slide style
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
   margin: 0 auto 14px;
-  color: #ffffff;
+  color: black;
   width: 90%;
   max-width: 400px;
 }

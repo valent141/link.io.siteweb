@@ -3,13 +3,13 @@
         <ul class="col-md-4 left">
             <li class="active">
                 <a href="index.php">
-                    <span class="icon-home"></span>
+                    <span class="icon">h</span>
                     Accueil
                 </a>
             </li>
             <li>
                 <a href="partenaire.php">
-                    <span class="icon-shopping-cart"></span>
+                    <span class="icon">&#xe909;</span>
                     Présentation
                 </a>
             </li>
@@ -23,13 +23,13 @@
         <ul class="col-md-4 right">
             <li>
                 <a href="#">
-                    <span class="icon-person"></span>
+                    <span class="icon">&#xe907;</span>
                     L'équipe
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <span class="icon-help"></span>
+                    <span class="icon">&#xe908;</span>
                     Démo
                 </a>
             </li>
