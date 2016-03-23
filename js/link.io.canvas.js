@@ -32,32 +32,39 @@ LinkIOCanvas.prototype.start = function() {
 
     this.can.mousedown(function(e) {
         that.lastEvent = e;
-        that.mouseDown = true;
     }).mousemove(function(e) {
-        if (that.mouseDown) {
-            if(Date.now() - that.lastLineTime > that.waitLineTime) {
-                that.linkIOcnx.emit("line", {
-                    fromX: (that.lastEvent.offsetX / that.can.width()) != 0 ? that.lastEvent.offsetX / that.can.width() : "0.0",
-                    fromY: (that.lastEvent.offsetY / that.can.height()) != 0 ? that.lastEvent.offsetY / that.can.height() : "0.0",
-                    toX: (e.offsetX / that.can.width()) != 0 ? e.offsetX / that.can.width() : "0.0",
-                    toY: (e.offsetY / that.can.height()) != 0 ? e.offsetY / that.can.height() : "0.0",
-                    color: that.color
-                }, false);
-                that.drawLine(that.lastEvent.offsetX / that.can.width(),
-                    that.lastEvent.offsetY/ that.can.height(),
-                    e.offsetX / that.can.width(),
-                    e.offsetY / that.can.height(),
-                    that.color);
-
-                that.lastEvent = e;
-                that.lastLineTime = Date.now();
-            }
-        }
-    }).mouseup(function(e) {
-        that.mouseDown = false;
-    }).mouseleave(function() {
-        that.can.mouseup();
+        that.mouseMove(e);
     });
+
+    this.can[0].addEventListener("touchstart", function(e) {
+        that.lastEvent = e;
+    });
+    this.can[0].addEventListener("touchmove", function(e) {
+        that.mouseMove(e);
+    });
+}
+
+LinkIOCanvas.prototype.mouseMove = function(e) {
+    var that = this;
+    if (e.buttons == 1) {
+        if(Date.now() - that.lastLineTime > that.waitLineTime) {
+            that.linkIOcnx.emit("line", {
+                fromX: (that.lastEvent.offsetX / that.can.width()) != 0 ? that.lastEvent.offsetX / that.can.width() : "0.0",
+                fromY: (that.lastEvent.offsetY / that.can.height()) != 0 ? that.lastEvent.offsetY / that.can.height() : "0.0",
+                toX: (e.offsetX / that.can.width()) != 0 ? e.offsetX / that.can.width() : "0.0",
+                toY: (e.offsetY / that.can.height()) != 0 ? e.offsetY / that.can.height() : "0.0",
+                color: that.color
+            }, false);
+            that.drawLine(that.lastEvent.offsetX / that.can.width(),
+                that.lastEvent.offsetY/ that.can.height(),
+                e.offsetX / that.can.width(),
+                e.offsetY / that.can.height(),
+                that.color);
+
+            that.lastEvent = e;
+            that.lastLineTime = Date.now();
+        }
+    }
 }
 
 LinkIOCanvas.prototype.clear = function() {

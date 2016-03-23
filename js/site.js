@@ -12,8 +12,8 @@ $(document).ready(function() {
 
 function initTwins() {
     var sessionID = generateRandomKey();
-    var pc = new LinkIOCanvas($("#canvas_pc"), sessionID, "#3498db", window, "PC");
-    var tablet = new LinkIOCanvas($("#canvas_tablet"), sessionID, "#2ecc71", window, "Tablet");
+    pc = new LinkIOCanvas($("#canvas_pc"), sessionID, "#3498db", window, "PC");
+    tablet = new LinkIOCanvas($("#canvas_tablet"), sessionID, "#2ecc71", window, "Tablet");
 
     tablet.start();
     pc.start();

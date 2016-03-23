@@ -19,8 +19,24 @@ nav.main {
     z-index: 1000;
 }
 
+#app nav .container {
+    padding: 0;
+}
+
+#app nav ul {
+    overflow: hidden;
+    padding: 0;
+}
+
 nav.main .logo {
     height: 150px;
+    display:none;
+}
+
+@media (min-width: 992px) {
+    nav.main .logo {
+        display:block;
+    }
 }
 
 nav.main .logo img {
