@@ -231,10 +231,61 @@
 }
 
 /******* DEMO ********/
-.demo {
 
+.boardWrapper {
+    position: relative;
 }
 
+.board
+{
+    position: relative;
+    height: 50vh;
+    background: white;
+    background-image: url('../img/demo/bg.png');
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.board:before, .board:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.board:after
+{
+    right:10px;
+    left:auto;
+    transform:skew(8deg) rotate(3deg);
+    z-index: 2;
+}
+
+.pencils {
+    position: absolute;
+    top: -60px;
+    right: 50px;
+    z-index: 0;
+}
+
+.pencils img {
+    cursor: pointer;
+    width: 40px;
+    position: relative;
+    top: 0;
+
+    transition: top 0.2s;
+}
+
+.pencils img:hover {
+    position: relative;
+    top: -15px;
+}
+
+/*** TEAM ***/
 .team-member {
     text-align:center;
 }
