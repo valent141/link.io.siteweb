@@ -14,7 +14,7 @@
     font-size: 4em;
     margin-top: 10vh;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .screen h1:after {
@@ -141,7 +141,54 @@
 
 /******* TWINS ********/
 .twins {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
+
+.twins .desc {
+    margin-bottom: 20px;
+}
+
+.twins .info h3  {
+    margin-top: 40px;
+    font-size: 1.8em;
+}
+
+.twins .info button  {
+    font-size: 0.6em;
+}
+
+.pc {
+    position: relative;
+    width: 433px;
+    height: 317px;
+    margin: auto;
+}
+
+.pc canvas {
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    background-color: white;
+    cursor:pointer;
+}
+
+.tablet {
+    position: relative;
+    width: 219px;
+    height: 314px;
+    margin: auto;
+}
+
+.tablet canvas {
+    position: absolute;
+    top: 61px;
+    left: 15px;
+    background-color: white;
+    cursor:pointer;
 }
 
 /******* ARCHITECTURE ********/

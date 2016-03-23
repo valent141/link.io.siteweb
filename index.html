@@ -21,6 +21,9 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="js/link.io.js"></script>
+    <script type="text/javascript" src="js/link.io.canvas.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
@@ -142,18 +145,27 @@
     <div class="row screen twins">
         <div class="container">
             <div class="row">
-                <h1>Principe</h1>
-
+                <h1>Principe:</h1>
                 <div class="row">
-                    <div class="col-md-4">
-
+                    <p class="desc">Cet ordinateur et cette tablette sont tous deux connectés au serveur Link.IO. Lors que vous dessinez sur l'un des appareils, il envoie un événement à l'autre appareil
+                    pour synchroniser le dessin.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pc">
+                            <img src="img/twin/pc.png" alt="" class="pc"/>
+                            <canvas id="canvas_pc" width="404px" height="232px"></canvas>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-
+                    <div class="col-md-6">
+                        <div class="tablet">
+                            <img src="img/twin/tablet.png" alt="" class="tablet"/>
+                            <canvas id="canvas_tablet" width="192px" height="233px"></canvas>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-
-                    </div>
+                </div>
+                <div class="row text-center info">
+                    <h3>Dessinez ! Vous pouvez aussi <button class="clear btn btn-primary">effacer</button></h3>
                 </div>
             </div>
         </div>
@@ -197,7 +209,7 @@
             <div class="row">
                 <div class="col-xs-4 col-md-2">
                     <div class="team-member">
-                        <img src="img/team/bastien-baret.png" class="img-responsive img-circle" alt="">
+                        <img src="img/team/bastien-baret.jpg" class="img-responsive img-circle" alt="">
                         <h4>Bastien<br/>BARET</h4>
                     </div>
                 </div>
@@ -240,7 +252,9 @@
     <div class="container">
         <div class="col-md-4">
             <h1 class="left">Qui sommes-nous ?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur delectus deserunt dignissimos doloremque, ea, impedit incidunt ipsum mollitia non odit officia optio quisquam sint velit! Delectus et quia unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur delectus deserunt
+                dignissimos doloremque, ea, impedit incidunt ipsum mollitia non odit officia optio quisquam sint velit!
+                Delectus et quia unde!</p>
         </div>
         <div class="col-md-4 text-center">
             <h1 class="center">Plan du site</h1>
