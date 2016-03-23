@@ -1,13 +1,23 @@
+var linkIO_serverIP = "localhost:8080";
+
 $(document).ready(function() {
+    nav = $('nav');
+
     $('.footer .year').html(new Date().getFullYear());
 
     $('nav.main li').click(function() {
         window.location = $(this).children('a').attr('href');
     });
 
+    $(window).on('scroll', function() {
+        if($(window).scrollTop() > 0)
+            nav.addClass('scrolled');
+        else
+            nav.removeClass('scrolled');
+    });
 
     initTwins();
-})
+});
 
 
 function initTwins() {
@@ -15,12 +25,23 @@ function initTwins() {
     pc = new LinkIOCanvas($("#canvas_pc"), sessionID, "#3498db", window, "PC");
     tablet = new LinkIOCanvas($("#canvas_tablet"), sessionID, "#2ecc71", window, "Tablet");
 
-    tablet.start();
-    pc.start();
+    tablet.start(linkIO_serverIP);
+    pc.start(linkIO_serverIP);
 
     $(".twins .clear").click(function() {
         tablet.clear();
         pc.clear();
+    });
+
+    $(".twins .btn-show").click(function() {
+        $(".twins .pc").toggleClass("code");
+
+        if($(".twins .pc").hasClass("code")) {
+            $(this).html("cacher le code");
+        }
+        else {
+            $(this).html("voir le code");
+        }
     });
 }
 

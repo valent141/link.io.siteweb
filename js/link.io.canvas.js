@@ -13,10 +13,10 @@ function LinkIOCanvas(canvas, roomID, color, window, name) {
     this.linkIOcnx = new __LinkIO();
 }
 
-LinkIOCanvas.prototype.start = function() {
+LinkIOCanvas.prototype.start = function(ip) {
     var that = this;
 
-    this.linkIOcnx.connect("localhost:8080", this.name);
+    this.linkIOcnx.connect(ip, this.name);
 
     this.linkIOcnx.on("line", function(e) {
         that.drawLine(e.fromX, e.fromY, e.toX, e.toY, e.color);

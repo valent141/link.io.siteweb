@@ -191,6 +191,40 @@
     cursor:pointer;
 }
 
+
+.twins .pc .pc-canvas {
+    height:1.5em;
+    margin-right:0.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(0deg);
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 5;
+}
+
+.twins .pc.code .pc-canvas {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.twins .pc .pc-code {
+    height:1.5em;
+    margin-right:0.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.twins .pc.code .pc-code {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
 /******* ARCHITECTURE ********/
 .architecture {
 
