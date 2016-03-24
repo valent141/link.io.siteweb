@@ -33,8 +33,31 @@
 
 
 /******* HOME ********/
-.home {
+.win-and-icon {
+    margin-bottom: 5px;
+    width: 24px;
+    height: 24px;
+}
 
+.windowstablet {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: auto;
+}
+
+.introLinkIO {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    height: 250px;
+}
+
+.rotating {
+    position: absolute;
+    width: 24px;
+    top: 310px;
+    left: 255px;
 }
 
 /******* PRESENTATION ********/
@@ -253,8 +276,10 @@
 }
 
 /******* ARCHITECTURE ********/
-.architecture {
-
+.architecture p.text {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 /******* DEMO ********/
