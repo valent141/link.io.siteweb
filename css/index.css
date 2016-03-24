@@ -323,6 +323,10 @@
     top: -15px;
 }
 
+.demo .demo_desc {
+    margin-top: 20px;
+}
+
 /*** TEAM ***/
 .team-member {
     text-align:center;
