@@ -28,6 +28,11 @@
     bottom: -20px;
 }
 
+.screen p.text {
+    width: 100%;
+    font-size: 1.2em;
+}
+
 
 /******* HOME ********/
 .home {
@@ -52,11 +57,6 @@
     position: absolute;
     left: 0;
     bottom: -20px;
-}
-
-.presentation p.text {
-    width: 100%;
-    font-size: 1.2em;
 }
 
 .presentation .card {
@@ -326,4 +326,8 @@
 /*** TEAM ***/
 .team-member {
     text-align:center;
+}
+
+.team p.text {
+	margin-bottom: 30px;
 }
