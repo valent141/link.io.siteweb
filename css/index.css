@@ -1,5 +1,4 @@
 /******** COMMON ***********/
-
 .screen {
     position: relative;
 }
@@ -33,7 +32,42 @@
 
 
 /******* HOME ********/
-.win-and-icon {
+header {
+	text-align: center;
+	background: #2F7AAC;
+	color: white;
+}
+header .container {
+	padding-top: 200px;
+	padding-bottom: 100px;
+}
+header .intro-logo video {
+	display: block;
+	margin: 0 auto 20px;
+}
+header .intro-text .title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2em;
+	display: block;
+	max-width: 870px;
+	margin: auto;
+}
+header .intro-text .subtitle {
+	font-weight: 300;
+	font-size: 1.25em;
+}
+header .intro-text hr {
+	padding: 0;
+	border: none;
+	border-top: solid 5px;
+	max-width: 250px;
+	margin: 25px auto 30px;
+	border-color: white;
+}
+
+
+/*.win-and-icon {
     margin-bottom: 5px;
     width: 24px;
     height: 24px;
@@ -58,7 +92,7 @@
     width: 24px;
     top: 310px;
     left: 255px;
-}
+}*/
 
 /******* PRESENTATION ********/
 
@@ -276,10 +310,13 @@
 }
 
 /******* ARCHITECTURE ********/
-.architecture p.text {
-    width: 100%;
-    font-size: 1.2em;
-    text-align: center;
+.architecture  p  {
+    margin-bottom: 40px;
+}
+
+.architecture img {
+	margin-bottom: 40px;
+	text-align:center;
 }
 
 /******* DEMO ********/
@@ -357,4 +394,8 @@
 
 .team p.text {
 	margin-bottom: 30px;
+}
+
+.team .container {
+	margin-bottom: 40px;
 }

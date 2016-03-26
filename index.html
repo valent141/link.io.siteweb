@@ -33,7 +33,13 @@
     <div class="container">
         <ul class="col-md-4 col-xs-6 right">
 			<li>
-                <a href="#">
+                <a href="#principe">
+                    <span class="icon">&#xe906;</span>
+                    Principe
+                </a>
+            </li>
+			<li>
+                <a href="#presentation">
                     <span class="icon">&#xe906;</span>
                     Présentation
                 </a>
@@ -52,14 +58,20 @@
         </div>
 
         <ul class="col-md-4 col-xs-6 left">
+			<li>
+                <a href="#architecture">
+                    <span class="icon">&#xe904;</span>
+                    Architecture
+                </a>
+            </li>
             <li>
-                <a href="#">
+                <a href="#demonstration">
                     <span class="icon">&#xe904;</span>
                     Démo
                 </a>
             </li>
 			<li>
-                <a href="#">
+                <a href="#equipe">
                     <span class="icon">&#xe902;</span>
                     L'équipe
                 </a>
@@ -68,28 +80,45 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<!--  Slide: home  -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-logo">
+                    <video src="img/home/logo.mp4" height="300" autoplay></video>
+                </div>
+                <div class="intro-text">
+                    <span class="title">Échangez et partagez des données entre vos applications web, Windows et Android !</span>
+                    <hr />
+                    <span class="subtitle">Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
+<div class="container-fluid">
     <!--  Slide: home  -->
-    <div class="row screen home">
+    <!--<section class="row screen home">
         <div class="container">
             <h1>Link.IO</h1>
             <div class="row">
                 <div class="col-lg-6">
                         <img class="windowstablet" src="img/home/windowsTab2.png" alt="">
-                        <video class="introLinkIO" src="img/home/Link.IO%20logo.mp4" autoplay></video>
+                        <video class="introLinkIO" src="img/home/logo.mp4" autoplay></video>
                     <img class="rotating" src="img/home/windows_icon_white.svg"alt="">
                 </div>
                 <div class="col-lg-6">
-                    <h2>Echanger et partager des données entre vos applications web, <img class="win-and-icon" src="img/home/windows-icon.svg" alt=""> et <img class="win-and-icon" src="img/home/android_icon.svg" alt=""> !
-                        <br/> <br/> Avec Link.IO, programmez et synchronisez vos échanges d'évènements entre vos applications le plus rapidement possible !</h2>
+                    <h2>Échangez et partagez des données entre vos applications web, <img class="win-and-icon" src="img/home/windows-icon.svg" alt=""> et <img class="win-and-icon" src="img/home/android_icon.svg" alt=""> !</h1>
+                    <h3>Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</h3>
                 </div>
             </div>
         </div>
-    </div>
+    </section>-->
 	
     <!--  Slide: présentation  -->
-    <div class="row screen presentation">
+    <section id="presentation" class="row screen presentation">
         <div class="container">
             <div class="row">
                 <h1>Présentation</h1>
@@ -142,23 +171,23 @@
                         <h3>Gestion des communications <em>cross-platform</em></h3>
 
                         <div class="line line-red"></div>
-                        <p>L'échange entre différentes plateformes est totalement transparent. Vos données peuvent
+                        <p>La communication entre différentes plateformes est totalement transparente. Vos données peuvent
                             transiter
                             de l'API C# vers l'API Java et inversement !</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--  Slide: twins  -->
-    <div class="row screen twins">
+    <section id="principe" class="row screen twins">
         <div class="container">
             <div class="row">
                 <h1>Principe</h1>
                 <div class="row">
-                    <p class="desc text">Cet ordinateur et cette tablette utilisent tous deux l'API Link.IO. Lors
-                        que vous dessinez sur l'un des appareils, il envoie un événement à l'autre appareil
+                    <p class="desc text">Cet ordinateur et cette tablette utilisent tous deux l'API Link.IO. Lorsque
+						vous dessinez sur l'un des appareils, il envoie un événement à l'autre appareil
                         pour synchroniser le dessin.</p>
                 </div>
                 <div class="row">
@@ -189,28 +218,23 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--  Slide: architecture  -->
-    <div class="row screen architecture">
+    <section id="architecture" class="row screen architecture">
         <div class="container">
             <div class="row">
                 <h1>Architecture</h1>
 
-                <div class="row centered">
-                    <div class="col-lg-6 col-lg-offset-3">
-                    <p class="text"> Link.IO utilise les WebSockets pour la gestion des communications entre les différents périphériques et un serveur s'occupe du relais des évènements aux bons destinataires.</p>
-                        </div>
-                    <div class="col-lg-6 col-lg-offset-3">
-                        <img src="img/archi/architecture.png" alt=""/>
-                    </div>
-                </div>
-            </div>
+                <p class="text">Link.IO utilise les <strong>WebSockets</strong> pour la gestion des communications entre périphériques avec un serveur qui s'occupe du relais des événements aux bons destinataires.</p>
+				<img class="img-responsive center-block" src="img/archi/architecture.png" alt="Architecture centralisée"/>
+				<p class="text">Il est possible d'administrer et de monitorer les événements pendant le développement et la production de votre application !</p>
+			</div>
         </div>
-    </div>
+    </section>
 
     <!--  Slide: demo  -->
-    <div class="row screen demo">
+    <section id="demonstration" class="row screen demo">
         <div class="container">
             <div class="row">
                 <h1>Démo</h1>
@@ -230,7 +254,7 @@
                     </div>
                     <div class="col-md-12">
                         <p class="demo_desc text-center">
-                            Le zone du dessus vous permet de dessiner en <strong>collaboration</strong> avec tous les autres visiteurs de ce site. Chaque trait que vous faite est envoyé aux autres et inversement.
+                            Le zone du dessus vous permet de dessiner en <strong>collaboration</strong> avec tous les autres visiteurs de ce site. Chaque trait que vous faites est envoyé aux autres et inversement.
                             <br/>
                             Pour tester par vous-même, vous pouvez ouvrir une autre démo depuis le même appareil ou avec un autre.
                         </p>
@@ -238,15 +262,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--  Slide: team -->
-    <section class="row screen team">
+    <section id="equipe" class="row screen team">
         <div class="container">
             <div class="row">
                 <h1>L'équipe</h1>
                 <p class="text">Link.IO a été développé en 2016 par 6 étudiants dans le cadre de leur formation
-                    d'ingénieur à l'INSA Rennes.</p>
+                    d'ingénieur à l'INSA Rennes et encadré par Yann RICQUEBOURG, enseignant-chercheur.</p>
             </div>
 
             <div class="row">
@@ -295,9 +319,7 @@
     <div class="container">
         <div class="col-md-4">
             <h1 class="left">Qui sommes-nous ?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur delectus deserunt
-                dignissimos doloremque, ea, impedit incidunt ipsum mollitia non odit officia optio quisquam sint velit!
-                Delectus et quia unde!</p>
+            <img src="img/insa.png" height="80px" />
         </div>
         <div class="col-md-4 text-center">
             <h1 class="center">Plan du site</h1>
@@ -318,7 +340,7 @@
 
 
     <div class="credit">
-        Bastien BARET © <span class="year"></span>
+       Link.IO © <span class="year"></span>
     </div>
 </div>
 

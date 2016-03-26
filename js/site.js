@@ -19,11 +19,16 @@ $(document).ready(function() {
     window.addEventListener('resize', onResize, false);
     onResize();
 
-    initPresentation();
+	initHome();
+	initPresentation();
     initTwins();
     initDemo();
 
 });
+
+function initHome() {
+    $("header").css("height", $(window).height() + "px");
+}
 
 function initPresentation() {
     var max = 0;
