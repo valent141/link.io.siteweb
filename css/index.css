@@ -224,14 +224,6 @@ header .intro-text hr {
 }
 
 /******* TWINS ********/
-.twins {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
 .twins .desc {
     margin-bottom: 20px;
 }
