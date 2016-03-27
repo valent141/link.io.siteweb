@@ -27,7 +27,7 @@ $(document).ready(function() {
 });
 
 function initHome() {
-    $("header").css("height", $(window).height() + "px");
+    $("header").css("min-height", $(window).height() + "px");
 }
 
 function initPresentation() {

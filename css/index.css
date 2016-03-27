@@ -3,10 +3,6 @@
     position: relative;
 }
 
-.screen:first-child {
-    padding-top: 100px;
-}
-
 .screen h1 {
     font-size: 4em;
     margin-top: 10vh;
@@ -37,14 +33,33 @@ header {
 	background: #2F7AAC;
 	color: white;
 }
+
 header .container {
 	padding-top: 200px;
 	padding-bottom: 100px;
 }
-header .intro-logo video {
-	display: block;
-	margin: 0 auto 20px;
+
+header .intro-logo .windowstablet {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+	margin-bottom: 20px;
 }
+
+header .intro-logo video {
+	position: absolute;
+    top: 45px;
+    height: 250px;
+	margin-left:-472px;
+}
+
+header .intro-logo .rotating {
+	position: absolute;
+    width: 24px;
+	margin-top: 312px;
+	margin-left: -265px;
+}
+
 header .intro-text .title {
 	text-transform: uppercase;
 	font-weight: 700;
@@ -53,10 +68,12 @@ header .intro-text .title {
 	max-width: 870px;
 	margin: auto;
 }
+
 header .intro-text .subtitle {
 	font-weight: 300;
 	font-size: 1.25em;
 }
+
 header .intro-text hr {
 	padding: 0;
 	border: none;
@@ -65,7 +82,6 @@ header .intro-text hr {
 	margin: 25px auto 30px;
 	border-color: white;
 }
-
 
 /*.win-and-icon {
     margin-bottom: 5px;
