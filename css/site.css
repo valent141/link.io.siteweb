@@ -121,7 +121,8 @@ nav.main ul.right li.active:nth-of-type(2) {border-bottom: 4px solid #9b59b6;}
 
 .footer {
     border-top: 5px solid #3498db;
-    height: 300px;
+    height: 200px;
+	padding-top: 30px;
     background-color: #222222;
     position: relative;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
