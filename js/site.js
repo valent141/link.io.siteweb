@@ -19,12 +19,34 @@ $(document).ready(function() {
     window.addEventListener('resize', onResize, false);
     onResize();
 
+    initScrollSpy();
+
 	initHome();
 	initPresentation();
     initTwins();
     initDemo();
 
 });
+
+function initScrollSpy() {
+    var sections = $("section");
+
+    $(window).scroll(onScroll);
+    onScroll();
+
+    function onScroll() {
+        var center = $(this).scrollTop() + $(this).height()/3;
+
+        for(var i = 0; i<sections.length; i++) {
+            var s = $(sections[i]);
+            var max = s.offset().top + (s.height() / 3) * 2;
+            if(center > s.offset().top && center < max) {
+                $("nav.main li.active").removeClass("active");
+                $("nav.main a[href='#" + s.attr('id') + "']").parent().addClass("active");
+            }
+        }
+    }
+}
 
 function initHome() {
     $("header").css("min-height", $(window).height() + "px");

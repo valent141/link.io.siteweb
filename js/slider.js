@@ -8,7 +8,7 @@ $(document).ready(function() {
     slidesNumber = slidesWrapper.children('li').length;
     visibleSlidePosition = 0;
     autoPlayId = "";
-    autoPlayDelay = 5000;
+    autoPlayDelay = 10000;
     miniCurrent = 0;
     miniShow = 7;
     miniTotal = $('.miniSlider .wrapper > div').length;
