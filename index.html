@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700' rel='stylesheet'
@@ -25,6 +26,7 @@
     <script type="text/javascript" src="js/socket.io.js"></script>
     <script type="text/javascript" src="js/link.io.js"></script>
     <script type="text/javascript" src="js/link.io.canvas.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
 
 </head>
@@ -81,44 +83,66 @@
     </div>
 </nav>
 
-<!--  Slide: home  -->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-logo">
-					<img class="windowstablet" src="img/home/windowsTab2.png" alt="">
-                    <video src="img/home/logo.mp4" autoplay></video>
-					<img class="rotating" src="img/home/windows_icon_white.svg"alt="">
-                </div>
-                <div class="intro-text">
-                    <span class="title">Échangez et partagez des données entre vos applications web, Windows et Android !</span>
-                    <hr />
-                    <span class="subtitle">Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <div class="container-fluid">
-    <!--  Slide: home  -->
-    <!--<section class="row screen home">
-        <div class="container">
-            <h1>Link.IO</h1>
-            <div class="row">
-                <div class="col-lg-6">
-                        <img class="windowstablet" src="img/home/windowsTab2.png" alt="">
-                        <video class="introLinkIO" src="img/home/logo.mp4" autoplay></video>
-                    <img class="rotating" src="img/home/windows_icon_white.svg"alt="">
-                </div>
-                <div class="col-lg-6">
-                    <h2>Échangez et partagez des données entre vos applications web, <img class="win-and-icon" src="img/home/windows-icon.svg" alt=""> et <img class="win-and-icon" src="img/home/android_icon.svg" alt=""> !</h1>
-                    <h3>Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</h3>
-                </div>
+
+    <!--  Slide: Slider  -->
+    <div class="row screen concept">
+
+        <section class="cd-hero">
+            <ul class="cd-hero-slider autoplay">
+                <li class="selected slide1">
+                    <div class="cd-half-width">
+                        <h2>Échangez et partagez des données entre vos applications web,<br/> Windows et Android !</h2>
+
+                        <p>Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</p>
+                    </div>
+
+                    <div class="cd-half-width cd-img-container">
+                        <div class="imgWrapper">
+                            <img class="windowstablet" src="img/twin/pc.png" alt="">
+                            <video src="img/home/logo.mp4" autoplay></video>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="slide2">
+                    <div class="cd-half-width cd-img-container">
+                        <img src="img/slider/2.jpg">
+                    </div>
+
+                    <div class="cd-half-width">
+                        <h2><br/><br/>Interface de monitoring</h2>
+
+                        <p>Logs, contenu des événements, statistiques...</p>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="cd-half-width">
+                        <h2><br/><br/>Gestion du référentiel</h2>
+
+                        <p>Applications, utilisateurs, droits et des rôles. Sauvegarde/restauration de la base de donnée.</p>
+                    </div>
+
+                    <div class="cd-half-width cd-img-container">
+                        <img src="img/slider/3.jpg">
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cd-slider-nav">
+                <nav>
+                    <span class="cd-marker item-1"></span>
+
+                    <ul>
+                        <li class="selected"><a href="#0"><span class="icon img">&#xe90d;</span></a></li>
+                        <li><a href="#0"><span class="icon img">&#xe90c;</span></a></li>
+                        <li><a href="#0"><span class="icon img">&#xe90b;</span></a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>-->
+        </section>
+    </div>
 	
     <!--  Slide: présentation  -->
     <section id="presentation" class="row screen presentation">

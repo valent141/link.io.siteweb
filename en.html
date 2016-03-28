@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>Link.IO</title>
-	<link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700' rel='stylesheet'
@@ -25,6 +26,7 @@
     <script type="text/javascript" src="js/socket.io.js"></script>
     <script type="text/javascript" src="js/link.io.js"></script>
     <script type="text/javascript" src="js/link.io.canvas.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
 
 </head>
@@ -33,13 +35,13 @@
 <nav class="main">
     <div class="container">
         <ul class="col-md-4 col-xs-6 right">
-			<li>
+            <li>
                 <a href="#principle">
                     <span class="icon">&#xe901;</span>
                     Principle
                 </a>
             </li>
-			<li>
+            <li>
                 <a href="#presentation">
                     <span class="icon">&#xe906;</span>
                     Presentation
@@ -59,7 +61,7 @@
         </div>
 
         <ul class="col-md-4 col-xs-6 left">
-			<li>
+            <li>
                 <a href="#architecture">
                     <span class="icon">&#xe908;</span>
                     Architecture
@@ -71,7 +73,7 @@
                     Demo
                 </a>
             </li>
-			<li>
+            <li>
                 <a href="#team">
                     <span class="icon">&#xe902;</span>
                     Team
@@ -81,45 +83,69 @@
     </div>
 </nav>
 
-<!--  Slide: home  -->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-logo">
-					<img class="windowstablet" src="img/home/windowsTab2.png" alt="">
-                    <video src="img/home/logo.mp4" autoplay></video>
-					<img class="rotating" src="img/home/windows_icon_white.svg"alt="">
-                </div>
-                <div class="intro-text">
-                    <span class="title">Share data between your Web, Windows and Android apps!</span>
-                    <hr />
-                    <span class="subtitle">With Link.IO, program and synchronize your event exchanges between your apps as simply for you as possible!</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
 <div class="container-fluid">
-    <!--  Slide: home  -->
-    <!--<section class="row screen home">
-        <div class="container">
-            <h1>Link.IO</h1>
-            <div class="row">
-                <div class="col-lg-6">
-                        <img class="windowstablet" src="img/home/windowsTab2.png" alt="">
-                        <video class="introLinkIO" src="img/home/logo.mp4" autoplay></video>
-                    <img class="rotating" src="img/home/windows_icon_white.svg"alt="">
-                </div>
-                <div class="col-lg-6">
-                    <h2>Échangez et partagez des données entre vos applications web, <img class="win-and-icon" src="img/home/windows-icon.svg" alt=""> et <img class="win-and-icon" src="img/home/android_icon.svg" alt=""> !</h1>
-                    <h3>Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le plus simplement possible !</h3>
-                </div>
+    <!--  Slide: Slider  -->
+    <div class="row screen concept">
+
+        <section class="cd-hero">
+            <ul class="cd-hero-slider autoplay">
+                <li class="selected slide1">
+                    <div class="cd-half-width">
+                        <h2>Échangez et partagez des données entre vos applications web,<br/> Windows et Android !</h2>
+
+                        <p>Avec Link.IO, programmez et synchronisez vos échanges d'événements entre vos applications le
+                            plus simplement possible !</p>
+                    </div>
+
+                    <div class="cd-half-width cd-img-container">
+                        <div class="imgWrapper">
+                            <img class="windowstablet" src="img/twin/pc.png" alt="">
+                            <video src="img/home/logo.mp4" autoplay></video>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="slide2">
+                    <div class="cd-half-width cd-img-container">
+                        <img src="img/slider/2.jpg">
+                    </div>
+
+                    <div class="cd-half-width">
+                        <h2><br/><br/>Interface de monitoring</h2>
+
+                        <p>Logs, contenu des événements, statistiques...</p>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="cd-half-width">
+                        <h2><br/><br/>Gestion du référentiel</h2>
+
+                        <p>Applications, utilisateurs, droits et des rôles. Sauvegarde/restauration de la base de
+                            donnée.</p>
+                    </div>
+
+                    <div class="cd-half-width cd-img-container">
+                        <img src="img/slider/3.jpg">
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cd-slider-nav">
+                <nav>
+                    <span class="cd-marker item-1"></span>
+
+                    <ul>
+                        <li class="selected"><a href="#0"><span class="icon img">&#xe90d;</span></a></li>
+                        <li><a href="#0"><span class="icon img">&#xe90c;</span></a></li>
+                        <li><a href="#0"><span class="icon img">&#xe90b;</span></a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>-->
-	
+        </section>
+    </div>
+
     <!--  Slide: présentation  -->
     <section id="presentation" class="row screen presentation">
         <div class="container">
@@ -129,7 +155,8 @@
                 <p class="text">Link.IO is an API (available for C# and Java languages) which allows app developers
                     using it to <strong>cut them off from communication issues</strong> between
                     devices. Link.IO offers a <strong>steady base of tools for your data exchanges</strong>
-                    (documents, images, texts...), and allows you to <strong>concentrate on your core businesses</strong>!</p>
+                    (documents, images, texts...), and allows you to <strong>concentrate on your core
+                        businesses</strong>!</p>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-md-3">
@@ -160,7 +187,8 @@
                         <h3>Exchange safety</h3>
 
                         <div class="line line-yellow"></div>
-                        <p>A group has administrable rights which are checked every time an event is sent by one of its member to improve safety.</p>
+                        <p>A group has administrable rights which are checked every time an event is sent by one of its
+                            member to improve safety.</p>
                     </div>
                 </div>
 
@@ -185,8 +213,9 @@
             <div class="row">
                 <h1>Principle</h1>
                 <div class="row">
-                    <p class="desc text">This computer and that tablet use Link.IO API. When you 
-					are drawing on one of these device, an event is sent to the other device to synchronize the picture.</p>
+                    <p class="desc text">This computer and that tablet use Link.IO API. When you
+                        are drawing on one of these device, an event is sent to the other device to synchronize the
+                        picture.</p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -224,10 +253,13 @@
             <div class="row">
                 <h1>Architecture</h1>
 
-                <p class="text">Link.IO uses <strong>WebSockets</strong> to manage communications between devices with a server which relays events to the right recipients.</p>
-				<img class="img-responsive center-block" src="img/archi/architecture.png" alt="Centralized architecture"/>
-				<p class="text">You can manage and monitor events during the development and the production of your app thanks to an interface!</p>
-			</div>
+                <p class="text">Link.IO uses <strong>WebSockets</strong> to manage communications between devices with a
+                    server which relays events to the right recipients.</p>
+                <img class="img-responsive center-block" src="img/archi/architecture.png"
+                     alt="Centralized architecture"/>
+                <p class="text">You can manage and monitor events during the development and the production of your app
+                    thanks to an interface!</p>
+            </div>
         </div>
     </section>
 
@@ -252,9 +284,11 @@
                     </div>
                     <div class="col-md-12">
                         <p class="demo_desc text-center">
-                            The above area lets you draw <strong>in collaboration with</strong> other persons currently visiting our website. Each stroke you are drawing is sent to others and vice versa.
+                            The above area lets you draw <strong>in collaboration with</strong> other persons currently
+                            visiting our website. Each stroke you are drawing is sent to others and vice versa.
                             <br/>
-                            You can check for yourself by opening an other demo from the same device or from another one.
+                            You can check for yourself by opening an other demo from the same device or from another
+                            one.
                         </p>
                     </div>
                 </div>
@@ -267,8 +301,8 @@
         <div class="container">
             <div class="row">
                 <h1>Team</h1>
-                <p class="text">Link.IO was developed in 2016 by 6 students as part of their engineer education at 
-					INSA Rennes, France and was supervised by Yann RICQUEBOURG, lecturer and researcher.</p>
+                <p class="text">Link.IO was developed in 2016 by 6 students as part of their engineer education at
+                    INSA Rennes, France and was supervised by Yann RICQUEBOURG, lecturer and researcher.</p>
             </div>
 
             <div class="row">
@@ -316,24 +350,28 @@
 <div class="footer">
     <div class="container">
         <div class="col-md-4">
-            <img src="img/insa.png" height="80px" />
+            <img src="img/insa.png" height="80px"/>
         </div>
         <div class="col-md-4 text-center">
-			<a href="index.html">
-				<img src="img/fr.png" height="40px" alt="English version" />
-			</a>
+            <a href="index.html">
+                <img src="img/fr.png" height="40px" alt="English version"/>
+            </a>
         </div>
         <div class="col-md-4">
-            <div><span class="icon">&#xe903;</span><a href="https://github.com/Chaniro/link.io.server">GitHub of the server</a></div>
-            <div><span class="icon">&#xe903;</span><a href="https://github.com/Leelow/link.io.server.monitoring">GitHub of the monitoring interface </a></div>
-            <div><span class="icon">&#xe903;</span><a href="https://github.com/Leelow/link.io.csharp">GitHub of C# client</a></div>
-            <div><span class="icon">&#xe903;</span><a href="https://github.com/Chaniro/link.io.java">GitHub of Java client</a></div>
+            <div><span class="icon">&#xe903;</span><a href="https://github.com/Chaniro/link.io.server">GitHub of the
+                server</a></div>
+            <div><span class="icon">&#xe903;</span><a href="https://github.com/Leelow/link.io.server.monitoring">GitHub
+                of the monitoring interface </a></div>
+            <div><span class="icon">&#xe903;</span><a href="https://github.com/Leelow/link.io.csharp">GitHub of C#
+                client</a></div>
+            <div><span class="icon">&#xe903;</span><a href="https://github.com/Chaniro/link.io.java">GitHub of Java
+                client</a></div>
         </div>
     </div>
 
 
     <div class="credit">
-       Link.IO © <span class="year"></span>
+        Link.IO © <span class="year"></span>
     </div>
 </div>
 
