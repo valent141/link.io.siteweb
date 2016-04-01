@@ -1,4 +1,4 @@
-var linkIO_serverIP = "localhost:8080";
+var linkIO_serverIP = "link-io.insa-rennes.fr:443";
 
 $(document).ready(function() {
     nav = $('nav');
