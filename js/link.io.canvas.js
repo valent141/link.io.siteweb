@@ -11,6 +11,7 @@ function LinkIOCanvas(canvas, roomID, color, window, name) {
     this.lastLineTime = 0;
     this.color = color;
     this.linkIOcnx = new __LinkIO();
+    this.down = false;
 }
 
 LinkIOCanvas.prototype.start = function(ip) {
@@ -32,15 +33,23 @@ LinkIOCanvas.prototype.start = function(ip) {
 
     this.can.mousedown(function(e) {
         that.lastEvent = e;
+        that.down = true;
     }).mousemove(function(e) {
         that.mouseMove(e);
+    }).mouseup(function(s) {
+        that.down = false;
     });
 
     this.can[0].addEventListener("touchstart", function(e) {
         that.lastEvent = e;
+        that.down = true;
     });
     this.can[0].addEventListener("touchmove", function(e) {
         that.mouseMove(e);
+    });
+    this.can[0].addEventListener("touchend", function(e) {
+        that.mouseMove(e);
+        that.down = false;
     });
 
     this.linkIOcnx.on("clear", function(e) {
@@ -50,7 +59,7 @@ LinkIOCanvas.prototype.start = function(ip) {
 
 LinkIOCanvas.prototype.mouseMove = function(e) {
     var that = this;
-    if (e.buttons == 1) {
+    if (that.down) {
         if(Date.now() - that.lastLineTime > that.waitLineTime) {
             that.linkIOcnx.emit("line", {
                 fromX: (that.lastEvent.offsetX / that.can.width()) != 0 ? that.lastEvent.offsetX / that.can.width() : "0.0",
