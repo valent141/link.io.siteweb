@@ -10,7 +10,7 @@ function __LinkIO() {
 }
 
 __LinkIO.prototype.connect = function(serverUrl, user) {
-    this.socket = io(serverUrl + "?user=" + user, {'force new connection': true});
+    this.socket = io(serverUrl + "?mail=website@insa-rennes.fr&password=123&api_key=TJ3rTCxTqg7w0Gujio2B", {'force new connection': true});
     socket = this.socket;
     var that = this;
 
