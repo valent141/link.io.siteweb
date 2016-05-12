@@ -11,7 +11,6 @@ function __LinkIO() {
 
 __LinkIO.prototype.connect = function(serverUrl, user) {
     var url = serverUrl + "?mail=" + encodeURIComponent("website@insa-rennes.fr") + "&password=123&api_key=TJ3rTCxTqg7w0Gujio2B";
-    console.log(url);
     this.socket = io(url, {'force new connection': true});
     socket = this.socket;
     var that = this;
